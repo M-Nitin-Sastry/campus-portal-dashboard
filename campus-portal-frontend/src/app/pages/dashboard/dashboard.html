@@ -1,0 +1,41 @@
+<nav class="navbar navbar-dark bg-dark px-3">
+  <h2 class="text-white">Campus Portal Admin</h2>
+  <button class="btn btn-outline-light">Logout</button>
+</nav>
+
+<div class="container mt-4">
+  <h3 class="text-center mb-4">Dashboard Overview</h3>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card p-3 text-center shadow">
+        <h4>Admissions</h4>
+        <p>Total admission categories & seats</p>
+        <button class="btn btn-primary w-100 mt-2" routerLink="/admissions">Manage Admissions</button>
+
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3 text-center shadow">
+        <h4>Placements</h4>
+        <p>Total students placed & companies visited</p>
+        <button class="btn btn-success w-100 mt-2" routerLink="/placements">
+  Manage Placements
+</button>
+
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3 text-center shadow">
+        <h4>Cultural Events</h4>
+        <p>Upcoming events & activities</p>
+        <button routerLink="/events" class="btn btn-primary">
+  Cultural Events
+</button>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Admissions</h2>
+
+  <!-- ADMISSION TYPE DROPDOWN -->
+  <div class="d-flex justify-content-center mb-3">
+    <select
+      class="form-select w-25"
+      [(ngModel)]="selectedType"
+      (change)="filterByType()">
+      <option *ngFor="let a of admissions" [value]="a.type">
+        {{ a.type }}
+      </option>
+    </select>
+  </div>
+
+  <!-- BRANCH TABLE -->
+  <table class="table table-bordered table-hover text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>Branch</th>
+        <th>Total Seats</th>
+        <th>Allocated Seats</th>
+        <th>Remaining</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let b of branches">
+        <td>{{ b.name }}</td>
+        <td>{{ b.totalSeats }}</td>
+        <td>{{ b.allocatedSeats }}</td>
+        <td>{{ b.totalSeats - b.allocatedSeats }}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" (click)="openUpdateModal(b)">
+            Update
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- MODAL BACKDROP -->
+<div
+  *ngIf="showModal"
+  class="modal-backdrop fade show"
+  style="background: rgba(0,0,0,0.4);
+         position: fixed; top:0; left:0; width:100%; height:100%; z-index:1050;">
+</div>
+
+<!-- MODAL CONTENT -->
+<div
+  *ngIf="showModal"
+  class="modal fade show d-block"
+  style="position: fixed; top:20%; left:0; right:0; z-index:1051;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Update Seats</h5>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+      </div>
+
+      <div class="modal-body">
+        <label><strong>Allocated Seats:</strong></label>
+        <input
+          type="number"
+          min="0"
+          class="form-control"
+          [(ngModel)]="selectedBranch.allocatedSeats"
+        />
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" (click)="updateSeats()">
+          Save
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

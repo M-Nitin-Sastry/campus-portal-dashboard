@@ -1,0 +1,70 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Cultural Events</h2>
+
+  <button class="btn btn-primary mb-3" (click)="openModal()">Add Event</button>
+
+  <table class="table table-bordered table-hover text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Venue</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let e of events">
+        <td>{{ e.title }}</td>
+        <td>{{ e.date | date:'mediumDate' }}</td>
+        <td>{{ e.venue }}</td>
+        <td>{{ e.status }}</td>
+        <td>
+          <button class="btn btn-sm btn-danger" (click)="deleteEvent(e._id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div *ngIf="showModal"
+     class="modal fade show d-block"
+     style="background: rgba(0,0,0,0.5); position: fixed; top:0; left:0; right:0; bottom:0;">
+  <div class="modal-dialog" style="margin-top: 10%;">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5>Add Event</h5>
+        <button class="btn-close" (click)="closeModal()"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <input class="form-control mb-2" placeholder="Event Title"
+               [(ngModel)]="data.title">
+
+        <input type="date" class="form-control mb-2"
+               [(ngModel)]="data.date">
+
+        <input class="form-control mb-2" placeholder="Venue"
+               [(ngModel)]="data.venue">
+
+        <select class="form-select" [(ngModel)]="data.status">
+          <option value="Upcoming">Upcoming</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="closeModal()">Close</button>
+        <button class="btn btn-primary" (click)="saveEvent()">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
