@@ -13,7 +13,7 @@ A full-stack web application to manage campus operations including admissions, p
 - Backend: Node.js, Express.js
 - Database: MongoDB
 - Tools: Postman
-- 
+  
 ## ⚙️ How to Run
 1. Clone the repo
 2. Install dependencies: `npm install`
