@@ -22,10 +22,12 @@ Open the folder:
 Inside you should see:
 backend
 campus-portal-frontend
+
 🔹 STEP 2 – Start VS Code in the project
 Right–click on the campus-portal folder.
 Click “Open with Code” (or open VS Code and do File → Open Folder… → select campus-portal).
 You should now see both folders (backend, campus-portal-frontend) in the VS Code Explorer.
+
 🔹 STEP 3 – Start MongoDB(You don’t need to open MongoDB Compass unless you want to view data.)
 If you installed MongoDB as a Windows service (default), it usually starts automatically.
 To be safe:
@@ -33,6 +35,7 @@ Press Windows key, type “Services”, open Services app.
 Scroll and look for: MongoDB or MongoDB Server.
 Make sure its Status = Running.
 If not, right-click → Start.
+
 🔹 STEP 4 – Start the Backend Server
 In VS Code:
 Open a new terminal:
@@ -48,6 +51,7 @@ You should see something like:
 Server running on http://localhost:4000
 MongoDB connected
 ✅ Leave this terminal running. Do NOT close it.
+
 🔹 STEP 5 – Start the Angular Frontend
 Now we open another terminal for the frontend.
 In VS Code, click:
@@ -62,6 +66,7 @@ This will compile the Angular app.
 When done, it will automatically open your browser at:
 👉 http://localhost:4200
 If it doesn’t auto-open, just manually type http://localhost:4200 in your browser.
+
 🔹 STEP 6 – Use your app
 Now you should be able to:
 Login with your admin credentials.
