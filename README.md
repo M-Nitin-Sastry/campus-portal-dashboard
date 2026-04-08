@@ -1,6 +1,9 @@
 # Campus Portal Admin Dashboard
 <img width="959" height="535" alt="Screenshot 2025-12-07 191106" src="https://github.com/user-attachments/assets/b5054ec5-05e2-45cd-9e94-3440a6ad122b" />
 <img width="959" height="500" alt="Screenshot 2025-12-07 191145" src="https://github.com/user-attachments/assets/8785a4b7-a786-481b-a5d1-be72dbd5336d" />
+<img width="959" height="536" alt="Screenshot 2025-12-07 191316" src="https://github.com/user-attachments/assets/370c57f8-03c1-419a-bdef-853f19a51a84" />
+<img width="959" height="536" alt="Screenshot 2025-12-07 191345" src="https://github.com/user-attachments/assets/25756815-21b7-40fc-bdde-df0f5ffae3bf" />
+<img width="959" height="536" alt="Screenshot 2025-12-07 191415" src="https://github.com/user-attachments/assets/04d69163-ac35-40cf-b66b-20ea414ceefc" />
 
 A full-stack web application to manage campus operations including admissions, placements, and events.
 
